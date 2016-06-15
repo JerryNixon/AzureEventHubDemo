@@ -1,5 +1,4 @@
 C:\git.repos\AzureEventHubDemo\WindowsClient\bin\x86\Debug\App.xbf
-C:\git.repos\AzureEventHubDemo\WindowsClient\bin\x86\Debug\Styles\Custom.xbf
 C:\git.repos\AzureEventHubDemo\WindowsClient\bin\x86\Debug\Views\MainPage.xbf
 C:\git.repos\AzureEventHubDemo\WindowsClient\bin\x86\Debug\WindowsClient.xr.xml
 C:\git.repos\AzureEventHubDemo\WindowsClient\bin\x86\Debug\WindowsClient.exe
@@ -123,10 +122,8 @@ C:\git.repos\AzureEventHubDemo\WindowsClient\obj\x86\Debug\Views\MainPage.g.i.cs
 C:\git.repos\AzureEventHubDemo\WindowsClient\obj\x86\Debug\Views\MainPage.g.cs
 C:\git.repos\AzureEventHubDemo\WindowsClient\obj\x86\Debug\XamlTypeInfo.g.cs
 C:\git.repos\AzureEventHubDemo\WindowsClient\obj\x86\Debug\App.xaml
-C:\git.repos\AzureEventHubDemo\WindowsClient\obj\x86\Debug\Styles\Custom.xaml
 C:\git.repos\AzureEventHubDemo\WindowsClient\obj\x86\Debug\Views\MainPage.xaml
 C:\git.repos\AzureEventHubDemo\WindowsClient\obj\x86\Debug\App.xbf
-C:\git.repos\AzureEventHubDemo\WindowsClient\obj\x86\Debug\Styles\Custom.xbf
 C:\git.repos\AzureEventHubDemo\WindowsClient\obj\x86\Debug\Views\MainPage.xbf
 C:\git.repos\AzureEventHubDemo\WindowsClient\obj\x86\Debug\XamlSaveStateFile.xml
 C:\git.repos\AzureEventHubDemo\WindowsClient\obj\x86\Debug\WindowsClient.exe

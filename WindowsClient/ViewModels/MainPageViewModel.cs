@@ -17,7 +17,9 @@ namespace WindowsClient.ViewModels
 
         public MainPageViewModel()
         {
+            // pre-fill with the past 10 minutes @ start
             Enumerable.Range(0, 10).ForEach(m => AddMinute(DateTime.Now.AddMinutes(-10 + m)));
+
             if (true | Windows.ApplicationModel.DesignMode.DesignModeEnabled)
             {
                 // sample data
@@ -32,13 +34,17 @@ namespace WindowsClient.ViewModels
                 Enumerable.Range(1, 15).ForEach(x => AddMessage(Services.SimulationService.GetSampleMessage()));
             }
 
+            // maintain minutes. even empty minutes.
             var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(30) };
             timer.Tick += (s, e) => AddMinute(DateTime.Now);
             timer.Start();
 
+            // turn on the push service, and monitor it
             _pushService = Services.PushService.Instance;
             _pushService.VoiceReceived += (s, e) => { if (IsEnabled) AddVoice(e); };
             _pushService.MessageReceived += (s, e) => { AddMessage(e); };
+
+            // TODO: disable simulated data
             Services.SimulationService.Instance.Start();
         }
 
@@ -83,6 +89,20 @@ namespace WindowsClient.ViewModels
 
         bool _IsEnabled = true;
         public bool IsEnabled { get { return _IsEnabled; } set { Set(ref _IsEnabled, value); } }
+
+        DelegateCommand<string> _SendMessageCommand;
+        public DelegateCommand<string> SendMessageCommand
+           => _SendMessageCommand ?? (_SendMessageCommand = new DelegateCommand<string>(SendMessageCommandExecute));
+        void SendMessageCommandExecute(string message)
+        {
+            // TODO: actually implement this
+            _pushService.RaiseMessageReceived(new Models.Message
+            {
+                Date = DateTime.Now,
+                Direction = Models.Directions.From,
+                Text = message
+            });
+        }
     }
 }
 

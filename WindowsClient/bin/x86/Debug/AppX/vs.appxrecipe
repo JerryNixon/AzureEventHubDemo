@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>f5445b9e-770f-42d8-827b-3934683c78fd</PackageIdentityName>
     <IntermediateOutputPath>C:\git.repos\AzureEventHubDemo\WindowsClient\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>F9A2D0D3260214A71E79D8F4A2089DBD4F2B0138A65317134E6CC8A046CD69BE</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>4CDC53B5265D67DA08312D4AC6433BEF1BF29C2EA16A04CE2C0CD43802CB59C6</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>f5445b9e-770f-42d8-827b-3934683c78fd_1.0.0.0_x86__dpar4jqn5ebar</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>f5445b9e-770f-42d8-827b-3934683c78fd_dpar4jqn5ebar!App</RegisteredUserModeAppID>
     <RegisteredPackageID>f5445b9e-770f-42d8-827b-3934683c78fd</RegisteredPackageID>
@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\git.repos\AzureEventHubDemo\WindowsClient\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-06-15T00:42:40.305</Modified>
+      <Modified>2016-06-15T05:57:15.960</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\git.repos\AzureEventHubDemo\WindowsClient\bin\x86\Debug\WindowsClient.exe">
       <PackagePath>entrypoint\WindowsClient.exe</PackagePath>
-      <Modified>2016-06-15T00:42:39.317</Modified>
+      <Modified>2016-06-15T05:57:14.815</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jerry\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -500,17 +500,13 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-06-14T18:28:35.907</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\git.repos\AzureEventHubDemo\WindowsClient\Help.htm">
-      <PackagePath>Help.htm</PackagePath>
-      <Modified>2016-06-14T18:28:37.240</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\git.repos\AzureEventHubDemo\WindowsClient\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2016-06-14T18:28:37.137</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\git.repos\AzureEventHubDemo\WindowsClient\bin\x86\Debug\WindowsClient.xr.xml">
       <PackagePath>WindowsClient.xr.xml</PackagePath>
-      <Modified>2016-06-15T00:42:39.007</Modified>
+      <Modified>2016-06-15T05:55:55.640</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -550,11 +546,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\git.repos\AzureEventHubDemo\WindowsClient\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-06-15T00:42:39.943</Modified>
+      <Modified>2016-06-15T05:57:15.437</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\git.repos\AzureEventHubDemo\WindowsClient\bin\x86\Debug\Core\WindowsClient.exe">
       <PackagePath>WindowsClient.exe</PackagePath>
-      <Modified>2016-06-15T00:42:40.303</Modified>
+      <Modified>2016-06-15T05:57:15.952</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

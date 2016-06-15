@@ -7,9 +7,6 @@
 
     <Application.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Styles\Custom.xaml" />
-            </ResourceDictionary.MergedDictionaries>
 
             <c:ValueWhenConverter x:Key="OneWhenFalseConverter">
                 <c:ValueWhenConverter.When>

@@ -13,8 +13,18 @@ namespace WindowsClient.Views
         {
             InitializeComponent();
             NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
-            Loaded += (s, e) => VisualStateManager.GoToState(this, MasterVisualState.Name, true);
-            ViewModel.Messages.CollectionChanged += (s, e) => MessageListView.ScrollIntoView(MessageListView.Items.Last());
+            Loaded += (s, e) =>
+            {
+                VisualStateManager.GoToState(this, MasterVisualState.Name, true);
+                ScrollMessageListBoxToBottom();
+            };
+            ViewModel.Messages.CollectionChanged += (s, e) => ScrollMessageListBoxToBottom();
+        }
+
+        private void ScrollMessageListBoxToBottom()
+        {
+            var scrollViewer = XamlUtils.AllChildren<ScrollViewer>(MessageListView).First();
+            scrollViewer.ChangeView(null, int.MaxValue, null);
         }
 
         private void Close_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
@@ -28,6 +38,7 @@ namespace WindowsClient.Views
         private void Item_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
             // show details
+            OverlayContainer.RenderTransformOrigin = new Windows.Foundation.Point(e.GetPosition(this).X / this.ActualWidth, e.GetPosition(this).Y / this.ActualHeight);
             VisualStateManager.GoToState(this, DetailsVisualState.Name, true);
             var item = (sender as FrameworkElement).DataContext as Models.Voice;
             OverlayContainer.DataContext = item;
