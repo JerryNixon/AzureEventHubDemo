@@ -1,0 +1,1 @@
+C:\git.repos\AzureEventHubDemo\WindowsClient\WindowsClient.csproj;x86

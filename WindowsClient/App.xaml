@@ -1,0 +1,53 @@
+<common:BootStrapper x:Class="WindowsClient.App"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:c="using:Template10.Converters"
+                     xmlns:common="using:Template10.Common"
+                     RequestedTheme="Light">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles\Custom.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <c:ValueWhenConverter x:Key="OneWhenFalseConverter">
+                <c:ValueWhenConverter.When>
+                    <x:Boolean>True</x:Boolean>
+                </c:ValueWhenConverter.When>
+                <c:ValueWhenConverter.Value>
+                    <x:Double>2</x:Double>
+                </c:ValueWhenConverter.Value>
+                <c:ValueWhenConverter.Otherwise>
+                    <x:Double>1</x:Double>
+                </c:ValueWhenConverter.Otherwise>
+            </c:ValueWhenConverter>
+
+            <c:ValueWhenConverter x:Key="HalfWhenFalseConverter">
+                <c:ValueWhenConverter.When>
+                    <x:Boolean>True</x:Boolean>
+                </c:ValueWhenConverter.When>
+                <c:ValueWhenConverter.Value>
+                    <x:Double>1</x:Double>
+                </c:ValueWhenConverter.Value>
+                <c:ValueWhenConverter.Otherwise>
+                    <x:Double>.75</x:Double>
+                </c:ValueWhenConverter.Otherwise>
+            </c:ValueWhenConverter>
+
+            <c:ValueWhenConverter xmlns:m="using:WindowsClient.Models" x:Key="ChatMarginConverter">
+                <c:ValueWhenConverter.When>
+                    <m:Directions>To</m:Directions>
+                </c:ValueWhenConverter.When>
+                <c:ValueWhenConverter.Value>
+                    <Thickness>24,4,0,4</Thickness>
+                </c:ValueWhenConverter.Value>
+                <c:ValueWhenConverter.Otherwise>
+                    <Thickness>0,4,24,4</Thickness>
+                </c:ValueWhenConverter.Otherwise>
+            </c:ValueWhenConverter>
+
+        </ResourceDictionary>
+    </Application.Resources>
+
+</common:BootStrapper>
